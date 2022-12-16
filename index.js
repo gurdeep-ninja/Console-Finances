@@ -87,8 +87,18 @@ var finances = [
     ['Feb-2017', 671099]
 ]
 
+/********************************************************************
+    1. Calculate the total number of months included in the dataset.
+*********************************************************************/
+
 // Assign totalMonhs variable to the total number of months included in the dataset
 let totalMonths = finances.length
+
+
+/********************************************************************
+    2. The net total amount of Profit/Losses over the entire period.
+    3.  Calculate the changes in Profit/Losses month to month
+*********************************************************************/
 
 // Store the calcuated total profit and loss
 let totalProfitLoss = 0
@@ -96,49 +106,40 @@ let totalProfitLoss = 0
 // we are creating a new array to store profit and loss for each month
 let financeChanges = []
 
-// Print a title for the report
-console.log("Financial Analysis")
-console.log("----------------------------")
-
-// Print total months
-console.log(`Total Months: ${totalMonths}`)
-
-// Calculate total Profit & Loss  to console
 for (i = 0; i < totalMonths; i++) {
+
+    /********************************************************************
+        2. The net total amount of Profit/Losses over the entire period.
+    ********************************************************************/
 
     //console.log(`profit/loss ${finances[i][0]} : ${finances[i][1]}`)
     let profitLossForMonth = finances[i][1]
     totalProfitLoss += profitLossForMonth
     //console.log(totalProfitLoss);
-}
 
-// Print Total Profit & Loss to console
-console.log(`Total: $${totalProfitLoss}`)
+    /*************************************************************************
+        3. Calculate the changes in Profit/Losses month to month
+    *************************************************************************/
 
-// Calculate average of changes in profit & loss
-
-// Calculate total Profit & Loss  to console
-for (i = 0; i < totalMonths; i++) {
-
-    // Initialise empty array to temporarily store new record
+    // Initialise empty array to store profit/loss changes against the current month
     let record = []
 
-    // Store profit and loss between current and previus month
+    // Store profit/loss value between current and previous month
     let profitLossBetweenMonths = 0
 
-    // If it's the first month, then there is 0 profit and loss
+    // If it's the first record, then there is 0 profit and loss
     if (i === 0) {
-        // store the first month name in array
+        // store the month as item 1 in array record[]
         record.push(finances[i][0])
-        // store the calculated profit and loss is 0 for first month
+        // store the calculated profit and loss as item 2 in the array record[]
         record.push(profitLossBetweenMonths)
-        // we are creating a new array to store profit and loss for each month
+        // Push the array record[] into the parent array financeChanges[]
         financeChanges.push(record)
     } else {
-        // Set the current month record in the loop (created for better reability)
+        // Store the current month index (created for better readbility)
         let currentMonth = i
 
-        // Set the previous month record in the loop (created for better reability)
+        // Set the previous month index (created for better readbility)
         let previousMonth = currentMonth - 1
 
         // Get current month profit loss value
@@ -150,9 +151,10 @@ for (i = 0; i < totalMonths; i++) {
         // calculate the profit and loss between the current and previous month
         profitLossBetweenMonths = currentMonthProfitLoss - previousMonthProfitLoss
 
-        // store the current month name in array
+        // store the month as item 1 in array record[]
         record.push(finances[i][0])
-        // store the calculated profit and loss against current month name in the array
+
+        // store the calculated profit and loss as item 2 in the array record[]
         record.push(profitLossBetweenMonths)
 
         //record["finances[i][0]"] = profitLossBetweenMonths
@@ -162,22 +164,19 @@ for (i = 0; i < totalMonths; i++) {
         financeChanges.push(record)
     }
 }
-//console.log(financeChanges) 
 
+
+/********************************************************************
+    4. Calculate the average of the changes in Profit/Losses over the entire period.
+    5. Calculate Greatest decrease & Increase over entire period
+*********************************************************************/
+
+/*
+    4. Calculate the average of the changes in Profit/Losses over the entire period.
+*/
+
+// Create variable to store change in profit and loss value 
 let totalChangeProfitLoss = 0
-for (i = 0; i < financeChanges.length; i++) {
-    let changesInProfitAndLoss = financeChanges[i][1]
-    totalChangeProfitLoss += changesInProfitAndLoss
-
-    //console.log(financeChanges[i][0])
-    //console.log(typeof financeChanges[0][1])
-
-}
-
-// Print Average Profit & Loss to console
-console.log(`Change: $${totalChangeProfitLoss}`)
-
-// Calculating the greatest increase and decrease  in profits over the entire period
 
 // Create a new array to store all values so we can use Javascript Math Max & Min function
 let changesInProfitAndLossValues = []
@@ -187,14 +186,26 @@ for (i = 0; i < financeChanges.length; i++) {
 
     // Get the value of profit and loss
     let changesInProfitAndLoss = financeChanges[i][1]
+    totalChangeProfitLoss += changesInProfitAndLoss
+
+    //console.log(financeChanges[i][0])
+    //console.log(typeof financeChanges[0][1])
 
     // Push extracted profit and loss value into new array changesInProfitAndLossValues[]
     changesInProfitAndLossValues.push(changesInProfitAndLoss)
 
     //console.log(financeChanges[i][0])
-    //console.log(typeof financeChanges[0][1])
-
+    //console.log(typeof financeChanges[0][1])    
 }
+
+// Calculate the average of the changes
+
+let averageChangesInProfitAndLoss = parseInt(totalChangeProfitLoss / financeChanges.length);
+/*
+    5. Calculate Greatest decrease & Increase over entire period
+*/
+
+// Calculating the greatest increase and decrease in profits over the entire period
 
 // Math.Max function to get the greatest increase in profit
 let greatestIncreaseInProfits = Math.max(...changesInProfitAndLossValues)
@@ -220,5 +231,20 @@ let greatestIncreaseInProfitsMonth = financeChanges[greatestIncreaseInProfitsInd
 let greatestDecreaseInProfitsMonth = financeChanges[greatestDecreaseInProfitsIndex][0]
 //console.log(greatestDecreaseInProfitsMonth)
 
+/********************************************************************
+    6. Display all the information to the user
+*********************************************************************/
+// Print a title for the report
+console.log("Financial Analysis")
+console.log("----------------------------")
+
+// Print total months
+console.log(`Total Months: ${totalMonths}`)
+
+// Print Total Profit & Loss to console
+console.log(`Total: $${totalProfitLoss}`)
+
+// Print Average Profit & Loss to console
+console.log(`Average Change: $${averageChangesInProfitAndLoss}`)
 console.log(`Greatest Increase in Profits: ${greatestIncreaseInProfitsMonth} ($${greatestIncreaseInProfits})`)
-console.log(`Greatest Decrease in Profits: ${greatestDecreaseInProfitsMonth} ($${greatestDecreaseInProfits})`)
+console.log(`Greatest Decrease in Profits: ${greatestDecreaseInProfitsMonth} ($${greatestDecreaseInProfits})`) 
