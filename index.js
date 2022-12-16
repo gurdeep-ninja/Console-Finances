@@ -111,15 +111,16 @@ console.log("----------------------------")
 // Print total months
 console.log(`Total Months: ${totalMonths}`)
 
-// Print total profit and loss
-
+// Calculate total Profit & Loss  to console
 for (i = 0;i < totalMonths;i++){
     
-    console.log(`profit/loss ${finances[i][0]} : ${finances[i][1]}`)
+    //console.log(`profit/loss ${finances[i][0]} : ${finances[i][1]}`)
     let profitLossForMonth = finances[i][1];
     totalProfitLoss += profitLossForMonth;
-    //console.log(totalProfitLoss);
+    //console.log(totalProfitLoss); 
 }
 
-console.log(totalProfitLoss);
+// Print Total Profit & Loss to console
+console.log(`Total: ${totalProfitLoss}`)
+
  
