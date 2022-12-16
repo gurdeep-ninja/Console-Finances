@@ -103,6 +103,7 @@ console.log(`Total Months: ${finances.length}`)
 // Assign totalMonhs variable to the total number of months included in the dataset
 let totalMonths = finances.length;
 let totalProfitLoss = 0;
+let financeChanges = [];
 
 // Print a title for the report
 console.log("Financial Analysis")
@@ -123,4 +124,17 @@ for (i = 0;i < totalMonths;i++){
 // Print Total Profit & Loss to console
 console.log(`Total: ${totalProfitLoss}`)
 
- 
+ // Calculate average of changes in profit & loss
+
+// Calculate total Profit & Loss  to console
+for (i = 0;i < totalMonths;i++){
+    let record = [];
+    console.log(finances[i][0])
+    if(i === 0){
+        record[finances[i][0]] = 0
+        financeChanges.push(record)
+    } else {
+
+    }
+}
+console.log(financeChanges)
