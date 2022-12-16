@@ -87,19 +87,6 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-/*
-Financial Analysis
-----------------------------
-Total Months: 25
-Total: $2561231
-Average  Change: $-2315.12
-Greatest Increase in Profits: Feb-2012 ($1926159)
-Greatest Decrease in Profits: Sep-2013 ($-2196167)
-console.log("Financial Analysis")
-console.log("----------------------------")
-console.log(`Total Months: ${finances.length}`)
-*/
-
 // Assign totalMonhs variable to the total number of months included in the dataset
 let totalMonths = finances.length;
 
@@ -190,3 +177,44 @@ for (i = 0; i < financeChanges.length;i++){
 // Print Average Profit & Loss to console
 console.log(`Change: $${totalChangeProfitLoss}`)
 
+// Calculating the greatest increase and decrease  in profits over the entire period
+
+// Create a new array to store all values so we can use Javascript Math Max & Min function
+let changesInProfitAndLossValues = []
+for (i = 0; i < financeChanges.length;i++){
+    let changesInProfitAndLoss = financeChanges[i][1];
+    changesInProfitAndLossValues.push(changesInProfitAndLoss)
+
+    //console.log(financeChanges[i][0])
+    //console.log(typeof financeChanges[0][1])
+
+}
+
+// Math.Max function to get the greatest increase in profit
+let greatestIncreaseInProfits = Math.max(...changesInProfitAndLossValues)
+
+// Math.Min function to get the greatest decrease in profit
+let greatestDecreaseInProfits = Math.min(...changesInProfitAndLossValues)
+
+/* 
+    Get the index value of greatest increase & decrease (we will use this index 
+    to get the date from the financeChanges array)
+*/
+let greatestIncreaseInProfitsIndex = changesInProfitAndLossValues.indexOf(greatestIncreaseInProfits);
+console.log(`Greatest Increase in Profits: ${greatestIncreaseInProfits}`)
+console.log(`Greatest Decrease in Profits: ${greatestDecreaseInProfits}`)
+
+
+
+/*
+Financial Analysis
+----------------------------
+Total Months: 25
+Total: $2561231
+Average  Change: $-2315.12
+Greatest Increase in Profits: Feb-2012 ($1926159)
+Greatest Decrease in Profits: Sep-2013 ($-2196167)
+console.log("Financial Analysis")
+console.log("----------------------------")
+console.log(`Total Months: ${finances.length}`)
+*/
