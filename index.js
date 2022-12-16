@@ -126,7 +126,7 @@ for (i = 0;i < totalMonths;i++){
 }
 
 // Print Total Profit & Loss to console
-console.log(`Total: ${totalProfitLoss}`)
+console.log(`Total: $${totalProfitLoss}`)
 
  // Calculate average of changes in profit & loss
 
@@ -141,7 +141,10 @@ for (i = 0;i < totalMonths;i++){
 
     // If it's the first month, then there is 0 profit and loss
     if(i === 0){
-        record[finances[i][0]] = profitLossBetweenMonths
+         // store the first month name in array
+        record.push(finances[i][0])
+        // store the calculated profit and loss is 0 for first month
+        record.push(profitLossBetweenMonths)
         // we are creating a new array to store profit and loss for each month
         financeChanges.push(record)
     } else {
@@ -174,8 +177,16 @@ for (i = 0;i < totalMonths;i++){
 }
 //console.log(financeChanges) 
 
-for (i =0; i < financeChanges.length;i++){
-    console.log(financeChanges[i][0])
-    console.log(financeChanges[i][1])
+let totalChangeProfitLoss = 0
+for (i = 0; i < financeChanges.length;i++){
+    let changesInProfitAndLoss = financeChanges[i][1];
+    totalChangeProfitLoss += changesInProfitAndLoss;
+
+    //console.log(financeChanges[i][0])
+    //console.log(typeof financeChanges[0][1])
 
 }
+
+// Print Average Profit & Loss to console
+console.log(`Change: $${totalChangeProfitLoss}`)
+
