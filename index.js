@@ -201,9 +201,20 @@ let greatestDecreaseInProfits = Math.min(...changesInProfitAndLossValues)
     to get the date from the financeChanges array)
 */
 let greatestIncreaseInProfitsIndex = changesInProfitAndLossValues.indexOf(greatestIncreaseInProfits);
-console.log(`Greatest Increase in Profits: ${greatestIncreaseInProfits}`)
-console.log(`Greatest Decrease in Profits: ${greatestDecreaseInProfits}`)
+//console.log(greatestIncreaseInProfitsIndex)
 
+let greatestDecreaseInProfitsIndex = changesInProfitAndLossValues.indexOf(greatestDecreaseInProfits);
+//console.log(greatestDecreaseInProfitsIndex)
+
+// Get the month for the Greatest Increase in Profits
+
+let greatestIncreaseInProfitsMonth = financeChanges[greatestIncreaseInProfitsIndex][0]
+//console.log(greatestIncreaseInProfitsMonth)
+
+let greatestDecreaseInProfitsMonth = financeChanges[greatestDecreaseInProfitsIndex][0]
+//console.log(greatestDecreaseInProfitsMonth)
+console.log(`Greatest Increase in Profits: ${greatestIncreaseInProfitsMonth} ($${greatestIncreaseInProfits})`)
+console.log(`Greatest Decrease in Profits: ${greatestDecreaseInProfitsMonth} ($${greatestDecreaseInProfits})`)
 
 
 /*
@@ -214,7 +225,4 @@ Total: $2561231
 Average  Change: $-2315.12
 Greatest Increase in Profits: Feb-2012 ($1926159)
 Greatest Decrease in Profits: Sep-2013 ($-2196167)
-console.log("Financial Analysis")
-console.log("----------------------------")
-console.log(`Total Months: ${finances.length}`)
-*/
+*/ 
