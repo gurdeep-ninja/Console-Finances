@@ -1,100 +1,100 @@
 var finances = [
-['Jan-2010', 867884],
-['Feb-2010', 984655],
-['Mar-2010', 322013],
-['Apr-2010', -69417],
-['May-2010', 310503],
-['Jun-2010', 522857],
-['Jul-2010', 1033096],
-['Aug-2010', 604885],
-['Sep-2010', -216386],
-['Oct-2010', 477532],
-['Nov-2010', 893810],
-['Dec-2010', -80353],
-['Jan-2011', 779806],
-['Feb-2011', -335203],
-['Mar-2011', 697845],
-['Apr-2011', 793163],
-['May-2011', 485070],
-['Jun-2011', 584122],
-['Jul-2011', 62729],
-['Aug-2011', 668179],
-['Sep-2011', 899906],
-['Oct-2011', 834719],
-['Nov-2011', 132003],
-['Dec-2011', 309978],
-['Jan-2012', -755566],
-['Feb-2012', 1170593],
-['Mar-2012', 252788],
-['Apr-2012', 1151518],
-['May-2012', 817256],
-['Jun-2012', 570757],
-['Jul-2012', 506702],
-['Aug-2012', -1022534],
-['Sep-2012', 475062],
-['Oct-2012', 779976],
-['Nov-2012', 144175],
-['Dec-2012', 542494],
-['Jan-2013', 359333],
-['Feb-2013', 321469],
-['Mar-2013', 67780],
-['Apr-2013', 471435],
-['May-2013', 565603],
-['Jun-2013', 872480],
-['Jul-2013', 789480],
-['Aug-2013', 999942],
-['Sep-2013', -1196225],
-['Oct-2013', 268997],
-['Nov-2013', -687986],
-['Dec-2013', 1150461],
-['Jan-2014', 682458],
-['Feb-2014', 617856],
-['Mar-2014', 824098],
-['Apr-2014', 581943],
-['May-2014', 132864],
-['Jun-2014', 448062],
-['Jul-2014', 689161],
-['Aug-2014', 800701],
-['Sep-2014', 1166643],
-['Oct-2014', 947333],
-['Nov-2014', 578668],
-['Dec-2014', 988505],
-['Jan-2015', 1139715],
-['Feb-2015', 1029471],
-['Mar-2015', 687533],
-['Apr-2015', -524626],
-['May-2015', 158620],
-['Jun-2015', 87795],
-['Jul-2015', 423389],
-['Aug-2015', 840723],
-['Sep-2015', 568529],
-['Oct-2015', 332067],
-['Nov-2015', 989499],
-['Dec-2015', 778237],
-['Jan-2016', 650000],
-['Feb-2016', -1100387],
-['Mar-2016', -174946],
-['Apr-2016', 757143],
-['May-2016', 445709],
-['Jun-2016', 712961],
-['Jul-2016', -1163797],
-['Aug-2016', 569899],
-['Sep-2016', 768450],
-['Oct-2016', 102685],
-['Nov-2016', 795914],
-['Dec-2016', 60988],
-['Jan-2017', 138230],
-['Feb-2017', 671099]
-];
+    ['Jan-2010', 867884],
+    ['Feb-2010', 984655],
+    ['Mar-2010', 322013],
+    ['Apr-2010', -69417],
+    ['May-2010', 310503],
+    ['Jun-2010', 522857],
+    ['Jul-2010', 1033096],
+    ['Aug-2010', 604885],
+    ['Sep-2010', -216386],
+    ['Oct-2010', 477532],
+    ['Nov-2010', 893810],
+    ['Dec-2010', -80353],
+    ['Jan-2011', 779806],
+    ['Feb-2011', -335203],
+    ['Mar-2011', 697845],
+    ['Apr-2011', 793163],
+    ['May-2011', 485070],
+    ['Jun-2011', 584122],
+    ['Jul-2011', 62729],
+    ['Aug-2011', 668179],
+    ['Sep-2011', 899906],
+    ['Oct-2011', 834719],
+    ['Nov-2011', 132003],
+    ['Dec-2011', 309978],
+    ['Jan-2012', -755566],
+    ['Feb-2012', 1170593],
+    ['Mar-2012', 252788],
+    ['Apr-2012', 1151518],
+    ['May-2012', 817256],
+    ['Jun-2012', 570757],
+    ['Jul-2012', 506702],
+    ['Aug-2012', -1022534],
+    ['Sep-2012', 475062],
+    ['Oct-2012', 779976],
+    ['Nov-2012', 144175],
+    ['Dec-2012', 542494],
+    ['Jan-2013', 359333],
+    ['Feb-2013', 321469],
+    ['Mar-2013', 67780],
+    ['Apr-2013', 471435],
+    ['May-2013', 565603],
+    ['Jun-2013', 872480],
+    ['Jul-2013', 789480],
+    ['Aug-2013', 999942],
+    ['Sep-2013', -1196225],
+    ['Oct-2013', 268997],
+    ['Nov-2013', -687986],
+    ['Dec-2013', 1150461],
+    ['Jan-2014', 682458],
+    ['Feb-2014', 617856],
+    ['Mar-2014', 824098],
+    ['Apr-2014', 581943],
+    ['May-2014', 132864],
+    ['Jun-2014', 448062],
+    ['Jul-2014', 689161],
+    ['Aug-2014', 800701],
+    ['Sep-2014', 1166643],
+    ['Oct-2014', 947333],
+    ['Nov-2014', 578668],
+    ['Dec-2014', 988505],
+    ['Jan-2015', 1139715],
+    ['Feb-2015', 1029471],
+    ['Mar-2015', 687533],
+    ['Apr-2015', -524626],
+    ['May-2015', 158620],
+    ['Jun-2015', 87795],
+    ['Jul-2015', 423389],
+    ['Aug-2015', 840723],
+    ['Sep-2015', 568529],
+    ['Oct-2015', 332067],
+    ['Nov-2015', 989499],
+    ['Dec-2015', 778237],
+    ['Jan-2016', 650000],
+    ['Feb-2016', -1100387],
+    ['Mar-2016', -174946],
+    ['Apr-2016', 757143],
+    ['May-2016', 445709],
+    ['Jun-2016', 712961],
+    ['Jul-2016', -1163797],
+    ['Aug-2016', 569899],
+    ['Sep-2016', 768450],
+    ['Oct-2016', 102685],
+    ['Nov-2016', 795914],
+    ['Dec-2016', 60988],
+    ['Jan-2017', 138230],
+    ['Feb-2017', 671099]
+]
 
 // Assign totalMonhs variable to the total number of months included in the dataset
-let totalMonths = finances.length;
+let totalMonths = finances.length
 
 // Store the calcuated total profit and loss
-let totalProfitLoss = 0;
+let totalProfitLoss = 0
 
 // we are creating a new array to store profit and loss for each month
-let financeChanges = [];
+let financeChanges = []
 
 // Print a title for the report
 console.log("Financial Analysis")
@@ -104,31 +104,31 @@ console.log("----------------------------")
 console.log(`Total Months: ${totalMonths}`)
 
 // Calculate total Profit & Loss  to console
-for (i = 0;i < totalMonths;i++){
-    
+for (i = 0; i < totalMonths; i++) {
+
     //console.log(`profit/loss ${finances[i][0]} : ${finances[i][1]}`)
-    let profitLossForMonth = finances[i][1];
-    totalProfitLoss += profitLossForMonth;
-    //console.log(totalProfitLoss); 
+    let profitLossForMonth = finances[i][1]
+    totalProfitLoss += profitLossForMonth
+    //console.log(totalProfitLoss);
 }
 
 // Print Total Profit & Loss to console
 console.log(`Total: $${totalProfitLoss}`)
 
- // Calculate average of changes in profit & loss
+// Calculate average of changes in profit & loss
 
 // Calculate total Profit & Loss  to console
-for (i = 0;i < totalMonths;i++){
+for (i = 0; i < totalMonths; i++) {
 
     // Initialise empty array to temporarily store new record
-    let record = [];
+    let record = []
 
     // Store profit and loss between current and previus month
     let profitLossBetweenMonths = 0
 
     // If it's the first month, then there is 0 profit and loss
-    if(i === 0){
-         // store the first month name in array
+    if (i === 0) {
+        // store the first month name in array
         record.push(finances[i][0])
         // store the calculated profit and loss is 0 for first month
         record.push(profitLossBetweenMonths)
@@ -136,17 +136,17 @@ for (i = 0;i < totalMonths;i++){
         financeChanges.push(record)
     } else {
         // Set the current month record in the loop (created for better reability)
-        let currentMonth = i;
+        let currentMonth = i
 
         // Set the previous month record in the loop (created for better reability)
-        let previousMonth = currentMonth-1;
-    
+        let previousMonth = currentMonth - 1
+
         // Get current month profit loss value
         let currentMonthProfitLoss = finances[currentMonth][1]
 
         // Get previous month profit loss value
         let previousMonthProfitLoss = finances[previousMonth][1]
-        
+
         // calculate the profit and loss between the current and previous month
         profitLossBetweenMonths = currentMonthProfitLoss - previousMonthProfitLoss
 
@@ -159,15 +159,15 @@ for (i = 0;i < totalMonths;i++){
         //console.log(finances[i][0])
 
         // Added our record array item (with two items month and profitliss) to our new financeChanges array
-        financeChanges.push(record) 
+        financeChanges.push(record)
     }
 }
 //console.log(financeChanges) 
 
 let totalChangeProfitLoss = 0
-for (i = 0; i < financeChanges.length;i++){
-    let changesInProfitAndLoss = financeChanges[i][1];
-    totalChangeProfitLoss += changesInProfitAndLoss;
+for (i = 0; i < financeChanges.length; i++) {
+    let changesInProfitAndLoss = financeChanges[i][1]
+    totalChangeProfitLoss += changesInProfitAndLoss
 
     //console.log(financeChanges[i][0])
     //console.log(typeof financeChanges[0][1])
@@ -181,8 +181,14 @@ console.log(`Change: $${totalChangeProfitLoss}`)
 
 // Create a new array to store all values so we can use Javascript Math Max & Min function
 let changesInProfitAndLossValues = []
-for (i = 0; i < financeChanges.length;i++){
-    let changesInProfitAndLoss = financeChanges[i][1];
+
+// Loop through the financeChanges array
+for (i = 0; i < financeChanges.length; i++) {
+
+    // Get the value of profit and loss
+    let changesInProfitAndLoss = financeChanges[i][1]
+
+    // Push extracted profit and loss value into new array changesInProfitAndLossValues[]
     changesInProfitAndLossValues.push(changesInProfitAndLoss)
 
     //console.log(financeChanges[i][0])
@@ -200,29 +206,19 @@ let greatestDecreaseInProfits = Math.min(...changesInProfitAndLossValues)
     Get the index value of greatest increase & decrease (we will use this index 
     to get the date from the financeChanges array)
 */
-let greatestIncreaseInProfitsIndex = changesInProfitAndLossValues.indexOf(greatestIncreaseInProfits);
+let greatestIncreaseInProfitsIndex = changesInProfitAndLossValues.indexOf(greatestIncreaseInProfits)
 //console.log(greatestIncreaseInProfitsIndex)
 
-let greatestDecreaseInProfitsIndex = changesInProfitAndLossValues.indexOf(greatestDecreaseInProfits);
+let greatestDecreaseInProfitsIndex = changesInProfitAndLossValues.indexOf(greatestDecreaseInProfits)
 //console.log(greatestDecreaseInProfitsIndex)
 
 // Get the month for the Greatest Increase in Profits
-
 let greatestIncreaseInProfitsMonth = financeChanges[greatestIncreaseInProfitsIndex][0]
 //console.log(greatestIncreaseInProfitsMonth)
 
+// Get the month for the Greatest Decrease in Profits
 let greatestDecreaseInProfitsMonth = financeChanges[greatestDecreaseInProfitsIndex][0]
 //console.log(greatestDecreaseInProfitsMonth)
+
 console.log(`Greatest Increase in Profits: ${greatestIncreaseInProfitsMonth} ($${greatestIncreaseInProfits})`)
 console.log(`Greatest Decrease in Profits: ${greatestDecreaseInProfitsMonth} ($${greatestDecreaseInProfits})`)
-
-
-/*
-Financial Analysis
-----------------------------
-Total Months: 25
-Total: $2561231
-Average  Change: $-2315.12
-Greatest Increase in Profits: Feb-2012 ($1926159)
-Greatest Decrease in Profits: Sep-2013 ($-2196167)
-*/ 
