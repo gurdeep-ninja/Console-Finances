@@ -102,9 +102,12 @@ console.log(`Total Months: ${finances.length}`)
 
 // Assign totalMonhs variable to the total number of months included in the dataset
 let totalMonths = finances.length;
+
+// Store the calcuated total profit and loss
 let totalProfitLoss = 0;
+
+// we are creating a new array to store profit and loss for each month
 let financeChanges = [];
-let averageProfitLossChanges = 0;
 
 // Print a title for the report
 console.log("Financial Analysis")
@@ -129,21 +132,50 @@ console.log(`Total: ${totalProfitLoss}`)
 
 // Calculate total Profit & Loss  to console
 for (i = 0;i < totalMonths;i++){
+
+    // Initialise empty array to temporarily store new record
     let record = [];
+
+    // Store profit and loss between current and previus month
     let profitLossBetweenMonths = 0
 
+    // If it's the first month, then there is 0 profit and loss
     if(i === 0){
         record[finances[i][0]] = profitLossBetweenMonths
+        // we are creating a new array to store profit and loss for each month
         financeChanges.push(record)
     } else {
+        // Set the current month record in the loop (created for better reability)
         let currentMonth = i;
+
+        // Set the previous month record in the loop (created for better reability)
         let previousMonth = currentMonth-1;
     
+        // Get current month profit loss value
         let currentMonthProfitLoss = finances[currentMonth][1]
-        let previousMonthProfitLoss = finances[previousMonth][1]         
+
+        // Get previous month profit loss value
+        let previousMonthProfitLoss = finances[previousMonth][1]
+        
+        // calculate the profit and loss between the current and previous month
         profitLossBetweenMonths = currentMonthProfitLoss - previousMonthProfitLoss
-        record[finances[i][0]] = profitLossBetweenMonths
+
+        // store the current month name in array
+        record.push(finances[i][0])
+        // store the calculated profit and loss against current month name in the array
+        record.push(profitLossBetweenMonths)
+
+        //record["finances[i][0]"] = profitLossBetweenMonths
+        //console.log(finances[i][0])
+
+        // Added our record array item (with two items month and profitliss) to our new financeChanges array
         financeChanges.push(record) 
     }
 }
-console.log(financeChanges) 
+//console.log(financeChanges) 
+
+for (i =0; i < financeChanges.length;i++){
+    console.log(financeChanges[i][0])
+    console.log(financeChanges[i][1])
+
+}
