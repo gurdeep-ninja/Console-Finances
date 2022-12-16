@@ -104,6 +104,7 @@ console.log(`Total Months: ${finances.length}`)
 let totalMonths = finances.length;
 let totalProfitLoss = 0;
 let financeChanges = [];
+let averageProfitLossChanges = 0;
 
 // Print a title for the report
 console.log("Financial Analysis")
@@ -129,12 +130,20 @@ console.log(`Total: ${totalProfitLoss}`)
 // Calculate total Profit & Loss  to console
 for (i = 0;i < totalMonths;i++){
     let record = [];
-    console.log(finances[i][0])
+    let profitLossBetweenMonths = 0
+
     if(i === 0){
-        record[finances[i][0]] = 0
+        record[finances[i][0]] = profitLossBetweenMonths
         financeChanges.push(record)
     } else {
-
+        let currentMonth = i;
+        let previousMonth = currentMonth-1;
+    
+        let currentMonthProfitLoss = finances[currentMonth][1]
+        let previousMonthProfitLoss = finances[previousMonth][1]         
+        profitLossBetweenMonths = currentMonthProfitLoss - previousMonthProfitLoss
+        record[finances[i][0]] = profitLossBetweenMonths
+        financeChanges.push(record) 
     }
 }
-console.log(financeChanges)
+console.log(financeChanges) 
