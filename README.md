@@ -4,7 +4,7 @@
 
 This tool analyses the financial records of a company. The financial records are composed of an array of records that include the month and corresponding profit & loss for that month.
 
-This app will calculate the following:
+This app will calculate & display the following in the browser console:
 
 * The total number of months included in the dataset (Total Months).
 * The net total amount of Profit/Losses over the entire period (Total).
