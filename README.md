@@ -41,4 +41,4 @@ Clone or download this project as a zip file & extract to your websites root dir
 Simply open the `index.html` file in your browser and the app will analyse the financial records and output them to the browser console.
 
 ## Technologies
-![HTML](https://img.shields.io/badge/html-76%25-red) ![JS](https://img.shields.io/badge/javascript-24%25-yellow)
+![JS](https://img.shields.io/badge/javascript-95%25-blue) ![HTML](https://img.shields.io/badge/html-5%25-red) 
