@@ -30,7 +30,7 @@ To edit the financial records, edit the array `finances[]` by either appending o
 
 ## Live demo
 
-[View deployed application on Github Pages](https://gurdeep-ninja.github.io/Bootstrap-Portfolio/)
+[View deployed application on Github Pages](https://gurdeep-ninja.github.io/Console-Finances/)
 
 
 ## Screenshot
