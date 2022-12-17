@@ -12,9 +12,11 @@ This app will calculate the following:
 * The greatest increase in profits (date and amount) over the entire period (Greatest Increase in Profits).
 * The greatest decrease in losses (date and amount) over the entire period (Greatest Decrease in Profits).
 
-## Editing records
+## Editing records to process
 
-To edit the financial records, edit the array finances by either appending or deleting extra records. Please format new record as an array.
+Financial records are stored in the array `finances[]`.
+
+To edit the financial records, edit the array `finances[]` by either appending or deleting extra records.
 
 ### Example
 
