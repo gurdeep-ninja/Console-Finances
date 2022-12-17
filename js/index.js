@@ -91,7 +91,7 @@ var finances = [
     1. Calculate the total number of months included in the dataset.
 *********************************************************************/
 
-// Assign totalMonhs variable to the total number of months included in the dataset
+// Assign totalMonths variable to the total number of months included in the dataset
 let totalMonths = finances.length
 
 
@@ -100,7 +100,7 @@ let totalMonths = finances.length
     3.  Calculate the changes in Profit/Losses month to month
 *********************************************************************/
 
-// Store the calcuated total profit and loss
+// Store the calculated total profit and loss
 let totalProfitLoss = 0
 
 // we are creating a new array to store profit and loss for each month
@@ -136,10 +136,10 @@ for (i = 0; i < totalMonths; i++) {
         // Push the array record[] into the parent array financeChanges[]
         financeChanges.push(record)
     } else {
-        // Store the current month index (created for better readbility)
+        // Store the current month index (created for better readability)
         let currentMonth = i
 
-        // Set the previous month index (created for better readbility)
+        // Set the previous month index (created for better readability)
         let previousMonth = currentMonth - 1
 
         // Get current month profit loss value
@@ -160,7 +160,7 @@ for (i = 0; i < totalMonths; i++) {
         //record["finances[i][0]"] = profitLossBetweenMonths
         //console.log(finances[i][0])
 
-        // Added our record array item (with two items month and profitliss) to our new financeChanges array
+        // Added our record array item (with two items month and profit/loss) to our new financeChanges array
         financeChanges.push(record)
     }
 }
