@@ -200,7 +200,7 @@ for (i = 0; i < financeChanges.length; i++) {
 
 // Calculate the average of the changes
 
-let averageChangesInProfitAndLoss = parseInt(totalChangeProfitLoss / financeChanges.length);
+let averageChangesInProfitAndLoss = Math.ceil((totalChangeProfitLoss / financeChanges.length) / 100) * 100
 /*
     5. Calculate Greatest decrease & Increase over entire period
 */
@@ -247,4 +247,4 @@ console.log(`Total: $${totalProfitLoss}`)
 // Print Average Profit & Loss to console
 console.log(`Average Change: $${averageChangesInProfitAndLoss}`)
 console.log(`Greatest Increase in Profits: ${greatestIncreaseInProfitsMonth} ($${greatestIncreaseInProfits})`)
-console.log(`Greatest Decrease in Profits: ${greatestDecreaseInProfitsMonth} ($${greatestDecreaseInProfits})`) 
+console.log(`Greatest Decrease in Profits: ${greatestDecreaseInProfitsMonth} ($${greatestDecreaseInProfits})`)
